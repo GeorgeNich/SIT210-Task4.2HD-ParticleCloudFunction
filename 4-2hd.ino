@@ -1,7 +1,7 @@
 
 
-int greenLed = D2;
-int yellowLed = D5;
+int greenLed = D2;          
+int yellowLed = D5;             // LED saved per colour to make it clear to refer too
 int redLed = D3;
 
 
@@ -13,11 +13,8 @@ void setup() {
     pinMode(greenLed, OUTPUT);
     pinMode(redLed, OUTPUT);
 
-    Particle.function("ledhtml",rygOn);
-    
-    digitalWrite(redLed, LOW);
-    digitalWrite(yellowLed, LOW);
-    digitalWrite(greenLed, LOW);
+    Particle.function("ledhtml",rygOn);     /// ledhtml is the value sent through the html post, rygOn is the function within the Particle device to react 
+                                            /// to the data sent back
     
 
 }
